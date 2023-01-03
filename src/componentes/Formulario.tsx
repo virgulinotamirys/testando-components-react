@@ -1,12 +1,12 @@
 import React, { useRef, useState } from "react"
 import { useMensagemErro } from "../state/hook/useMensagemErro"
-import { userAdicionarParticipante } from "../state/hook/userAdicionarParticipante"
+import { useAdicionarParticipante } from "../state/hook/userAdicionarParticipante"
 import './Formulario.css'
 
 const Formulario = () => {
     const [nome, setNome] = useState('')
     const inputRef = useRef<HTMLInputElement>(null)
-    const adicionarLista = userAdicionarParticipante()
+    const adicionarLista = useAdicionarParticipante()
     const mensagemErro = useMensagemErro()
 
     const adicionarParticipante = (evento: React.FormEvent<HTMLFormElement>) => {
